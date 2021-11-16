@@ -13,6 +13,11 @@
   --text-color: #D5E1EF;
 }
 
+a{
+  color: #fff;
+  text-decoration: none;
+}
+
 html, body {
   width: 100%;
   min-height: 100vh;
@@ -113,6 +118,10 @@ body {
 
 h1 {
   /* font-family: "Michroma", sans-serif; */
+}
+
+.cursor-pointer{
+  cursor: pointer;
 }
 
 .grouptext{
@@ -229,3 +238,6 @@ button.preorder {
   display: flex;
   flex-direction: column;
 }
+
+
+/* ============= SUMAR Opción ============= */

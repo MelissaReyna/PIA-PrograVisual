@@ -21,7 +21,13 @@ app.on('ready', () => {
     resizable: false,
     width: 1000, 
     height: 600, 
-    icon: path.join(__dirname, 'mathematics-symbol.ico')
+    icon: path.join(__dirname, 'mathematics-symbol.ico'),
+    webPreferences: {
+      contextIsolation: false,
+      nodeIntegration: true,
+      nodeIntegrationInWorker: true,
+      enableRemoteModule: true
+      }
   });
 
   mainWindow.loadURL(url.format({
@@ -45,9 +51,11 @@ app.on('ready', () => {
 
 function createSumWindow() {
   newSumWindow = new BrowserWindow({
+    resizable: false,
     width: 600,
     height: 400,
-    title: 'Opción Sumar'
+    title: 'Opción Sumar',
+    icon: path.join(__dirname, 'mathematics-symbol.ico')
   });
   newSumWindow.setMenu(null);
 
@@ -65,7 +73,8 @@ function createRestWindow() {
   newRestWindow = new BrowserWindow({
     width: 600,
     height: 400,
-    title: 'Opción Restar'
+    title: 'Opción Restar',
+    icon: path.join(__dirname, 'mathematics-symbol.ico')
   });
   newRestWindow.setMenu(null);
 
@@ -83,7 +92,8 @@ function createMultipWindow() {
   newMultipWindow = new BrowserWindow({
     width: 600,
     height: 400,
-    title: 'Opción Multiplicar'
+    title: 'Opción Multiplicar',
+    icon: path.join(__dirname, 'mathematics-symbol.ico')
   });
   newMultipWindow.setMenu(null);
 
@@ -101,7 +111,8 @@ function createDivWindow() {
   newDivWindow = new BrowserWindow({
     width: 600,
     height: 400,
-    title: 'Opción Dividir'
+    title: 'Opción Dividir',
+    icon: path.join(__dirname, 'mathematics-symbol.ico')
   });
   newDivWindow.setMenu(null);
 
@@ -114,6 +125,23 @@ function createDivWindow() {
     newDivWindow = null;
   });
 }
+
+// Ipc Renderer Events
+ipcMain.on('btnSum_onClick', (e) => {
+  createSumWindow();
+});
+
+ipcMain.on('btnRest_onClick', (e) => {
+  createRestWindow();
+});
+
+ipcMain.on('btnMult_onClick', (e) => {
+  createMultipWindow();
+});
+
+ipcMain.on('btnDiv_onClick', (e) => {
+  createDivWindow();
+});
 
 
 // Menu Template
