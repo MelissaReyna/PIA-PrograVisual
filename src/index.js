@@ -53,7 +53,7 @@ function createSumWindow() {
   newSumWindow = new BrowserWindow({
     resizable: false,
     width: 800,
-    height: 500,
+    height: 600,
     title: 'Opción Sumar',
     icon: path.join(__dirname, 'mathematics-symbol.ico')
   });
@@ -72,7 +72,7 @@ function createSumWindow() {
 function createRestWindow() {
   newRestWindow = new BrowserWindow({
     width: 800,
-    height: 500,
+    height: 600,
     title: 'Opción Restar',
     icon: path.join(__dirname, 'mathematics-symbol.ico')
   });
@@ -91,11 +91,11 @@ function createRestWindow() {
 function createMultipWindow() {
   newMultipWindow = new BrowserWindow({
     width: 800,
-    height: 600,
+    height: 700,
     title: 'Opción Multiplicar',
     icon: path.join(__dirname, 'mathematics-symbol.ico')
   });
-  newMultipWindow.setMenu(null);
+  //newMultipWindow.setMenu(null);
 
   newMultipWindow.loadURL(url.format({
     pathname: path.join(__dirname, 'options/multiplicar.html'),
@@ -110,7 +110,7 @@ function createMultipWindow() {
 function createDivWindow() {
   newDivWindow = new BrowserWindow({
     width: 800,
-    height: 500,
+    height: 600,
     title: 'Opción Dividir',
     icon: path.join(__dirname, 'mathematics-symbol.ico')
   });

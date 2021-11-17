@@ -12,10 +12,12 @@
   function calc() {
     let number1 = Number(document.querySelector("#number1").value);
     let number2 = Number(document.querySelector("#number2").value);
-    let sum = number1 * number2;
+    let number3 = Number(document.querySelector("#number3").value);
+    let sum = number1 * number2 * number3;
     document.getElementById("result").value = sum;
     document.getElementById("number1").value = null;
     document.getElementById("number2").value = null;
+    document.getElementById("number3").value = null;
   }
 </script>
 <body>
@@ -41,6 +43,10 @@
                   <div class="field padding-bottom--24">
                     <label for="number2">Número 2:</label>
                     <input id='number2' type="number" name="number2" placeholder="Escribe el segundo número">
+                  </div>
+                  <div class="field padding-bottom--24">
+                    <label for="number3">Número 3:</label>
+                    <input id='number3' type="number" name="number3" placeholder="Escribe el tercer número">
                   </div>
                   <div class="field padding-bottom--24">
                     <label for="result">Resultado:</label>
