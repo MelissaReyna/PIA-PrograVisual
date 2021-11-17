@@ -52,8 +52,8 @@ app.on('ready', () => {
 function createSumWindow() {
   newSumWindow = new BrowserWindow({
     resizable: false,
-    width: 600,
-    height: 400,
+    width: 800,
+    height: 500,
     title: 'Opción Sumar',
     icon: path.join(__dirname, 'mathematics-symbol.ico')
   });
@@ -71,8 +71,8 @@ function createSumWindow() {
 
 function createRestWindow() {
   newRestWindow = new BrowserWindow({
-    width: 600,
-    height: 400,
+    width: 800,
+    height: 500,
     title: 'Opción Restar',
     icon: path.join(__dirname, 'mathematics-symbol.ico')
   });
@@ -90,8 +90,8 @@ function createRestWindow() {
 
 function createMultipWindow() {
   newMultipWindow = new BrowserWindow({
-    width: 600,
-    height: 400,
+    width: 800,
+    height: 600,
     title: 'Opción Multiplicar',
     icon: path.join(__dirname, 'mathematics-symbol.ico')
   });
@@ -109,8 +109,8 @@ function createMultipWindow() {
 
 function createDivWindow() {
   newDivWindow = new BrowserWindow({
-    width: 600,
-    height: 400,
+    width: 800,
+    height: 500,
     title: 'Opción Dividir',
     icon: path.join(__dirname, 'mathematics-symbol.ico')
   });
