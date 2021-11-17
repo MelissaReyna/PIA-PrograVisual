@@ -1,24 +1,27 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
-*, button, input {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+*,
+button,
+input {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 :root {
-  --bg-shape-color:linear-gradient(120deg, #343A4F, #0F1620) ;
-  --lightblue: #3D9DEA;
-  --darkblue: #4A4EEE;
-  --text-color: #D5E1EF;
+  --bg-shape-color: linear-gradient(120deg, #343a4f, #0f1620);
+  --lightblue: #3d9dea;
+  --darkblue: #4a4eee;
+  --text-color: #d5e1ef;
 }
 
-a{
+a {
   color: #fff;
   text-decoration: none;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   min-height: 100vh;
   background-image: linear-gradient(90deg, #414850, #131720);
@@ -32,6 +35,10 @@ body {
   flex-direction: column;
 }
 
+#result {
+  background-color: #d5e1ef;
+}
+
 .wrapper {
   width: 350px;
   border-radius: 40px;
@@ -40,16 +47,19 @@ body {
   height: 15em;
 }
 
-.overviewInfo, .productSpecifications {
+.overviewInfo,
+.productSpecifications {
   padding: 24px;
 }
 
 .overviewInfo {
   background-image: linear-gradient(176deg, var(--lightblue), var(--darkblue));
+  color: white;
 }
 
-.overviewInfo:hover{
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+.overviewInfo:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 .actions {
@@ -61,7 +71,7 @@ body {
   position: relative;
 }
 .actions .cartbutton::after {
-  content: "";
+  content: '';
   display: block;
   width: 8px;
   height: 8px;
@@ -74,7 +84,8 @@ body {
 .actions .cartbutton svg {
   color: #ababab73;
 }
-.actions .backbutton, .actions .cartbutton {
+.actions .backbutton,
+.actions .cartbutton {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -85,7 +96,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: inset 3px 4px 5px 0px rgba(197, 197, 197, 0.1), inset 3px 6px 6px 5px rgba(78, 77, 77, 0.1), -2px -2px 8px 2px rgba(255, 255, 255, 0.1), 2px 2px 6px 3px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 3px 4px 5px 0px rgba(197, 197, 197, 0.1),
+    inset 3px 6px 6px 5px rgba(78, 77, 77, 0.1),
+    -2px -2px 8px 2px rgba(255, 255, 255, 0.1),
+    2px 2px 6px 3px rgba(0, 0, 0, 0.4);
 }
 
 .productinfo {
@@ -103,7 +117,6 @@ body {
   height: auto;
   transform: rotate(1deg) translate(100px, -65px);
   transition: ease 2s all;
-  
 }
 .productImage img {
   width: 100%;
@@ -113,22 +126,22 @@ body {
 .productImage:hover {
   transition: ease 2s all;
   animation: none;
-  transform: rotate(20deg) translate(100px, -65px);;
+  transform: rotate(20deg) translate(100px, -65px);
 }
 
-.fs-1{
+.fs-1 {
   font-size: 1em;
 }
 
-h1 {
-  /* font-family: "Michroma", sans-serif; */
-}
+/* h1 { */
+/* font-family: "Michroma", sans-serif; */
+/* } */
 
-.cursor-pointer{
+.cursor-pointer {
   cursor: pointer;
 }
 
-.grouptext{
+.grouptext {
   z-index: 999999999;
 }
 
@@ -179,7 +192,9 @@ h1 {
   background-image: var(--bg-shape-color);
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: -2px -2px 2px 0px rgba(80, 80, 80, 0.1), 2px 2px 3px 0px rgba(12, 12, 12, 0.3), inset 0px 0px 0px 2px rgba(80, 80, 80, 0.2);
+  box-shadow: -2px -2px 2px 0px rgba(80, 80, 80, 0.1),
+    2px 2px 3px 0px rgba(12, 12, 12, 0.3),
+    inset 0px 0px 0px 2px rgba(80, 80, 80, 0.2);
   margin-top: 30px;
   padding: 14px;
   justify-content: space-between;
@@ -228,20 +243,20 @@ button.preorder {
   0% {
     transform: rotate(-90deg) translate(-56px, 66px);
   }
-  80%, 100% {
+  80%,
+  100% {
     transform: rotate(-70deg) translate(10px, 66px);
   }
 }
 
-.flex{
+.flex {
   display: flex;
 }
 
-.align-center{
+.align-center {
   align-items: center;
   display: flex;
   flex-direction: column;
 }
-
 
 /* ============= SUMAR Opción ============= */
