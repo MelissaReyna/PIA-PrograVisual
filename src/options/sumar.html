@@ -8,6 +8,16 @@
   <link rel="stylesheet" href="../index.css">
 
 </head>
+<script>
+  function calc() {
+    let number1 = Number(document.querySelector("#number1").value);
+    let number2 = Number(document.querySelector("#number2").value);
+    let sum = number1 + number2;
+    document.getElementById("result").value = sum;
+    document.getElementById("number1").value = null;
+    document.getElementById("number2").value = null;
+  }
+</script>
 <body>
 <!-- partial:index.partial.html -->
 <body>
@@ -25,15 +35,19 @@
                 </div>
                 <form id="stripe-login">
                   <div class="field padding-bottom--24">
-                    <label for="email">Número 1:</label>
-                    <input type="email" name="email" placeholder="Escribe el primer número">
+                    <label for="number1">Número 1:</label>
+                    <input id='number1' type="number" name="numer1" placeholder="Escribe el primer número">
                   </div>
                   <div class="field padding-bottom--24">
-                    <label for="password">Número 2:</label>
-                    <input type="password" name="password" placeholder="Escribe el segundo número">
+                    <label for="number2">Número 2:</label>
+                    <input id='number2' type="number" name="number2" placeholder="Escribe el segundo número">
                   </div>
                   <div class="field padding-bottom--24">
-                    <input class="overviewInfo" type="submit" name="submit" value="Obtener Resultado">
+                    <label for="result">Resultado:</label>
+                    <input id='result' type="number" name="result" disabled='true' placeholder="Resultado">
+                  </div>
+                  <div class="field padding-bottom--24">
+                    <input id="execute" onclick="calc()" class="overviewInfo" type="button" name="submit" value="Obtener Resultado">
                   </div>
                 </form>
               </div>
